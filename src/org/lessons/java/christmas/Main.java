@@ -1,8 +1,6 @@
 package org.lessons.java.christmas;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,8 +28,11 @@ public class Main {
             System.out.println("Hai aggiunto " + wishes.toArray().length + " desideri");
 
         }
-
+        Collections.sort(wishes);
+        System.out.println("***************");
         System.out.println("Ecco la tua lista: ");
+        System.out.println();
         System.out.println(wishes);
+        System.out.println("***************");
     }
 }
