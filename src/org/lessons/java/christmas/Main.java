@@ -25,6 +25,10 @@ public class Main {
 
             // FERMO IL CICLO SE DIGITA "N"
             stop = scan.nextLine().equalsIgnoreCase("n");
+
+            // STAMPO QUANTI DESIDERI SONO STATI AGGIUNTI FINO AD ORA NELLA LISTA
+            System.out.println("Hai aggiunto " + wishes.toArray().length + " desideri");
+
         }
 
         System.out.println("Ecco la tua lista: ");
