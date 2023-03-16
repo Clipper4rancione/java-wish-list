@@ -28,6 +28,12 @@ public class Main {
             System.out.println("Hai aggiunto " + wishes.toArray().length + " desideri");
 
         }
+        // DATI DEL MITTENTE
+        System.out.print("Come ti chiami? ");
+        String name = scan.nextLine();
+        System.out.print("Il tuo indirizzo? ");
+        String address = scan.nextLine();
+
         Collections.sort(wishes);
         System.out.println("***************");
         System.out.println("Ecco la tua lista: ");
@@ -37,7 +43,7 @@ public class Main {
 
 
         try {
-            ChristmasLetter letter = new ChristmasLetter("Ciro", "Via Napoli", wishes);
+            ChristmasLetter letter = new ChristmasLetter(name, address, wishes);
             System.out.println(letter.send());
         } catch (wishesException e) {
             e.getMessage();
