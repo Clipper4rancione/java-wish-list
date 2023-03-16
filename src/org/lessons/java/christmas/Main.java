@@ -3,7 +3,7 @@ package org.lessons.java.christmas;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws wishesException {
         Scanner scan = new Scanner(System.in);
         List<String> wishes = new ArrayList<>();
 //        System.out.println(wishes.isEmpty());
@@ -34,5 +34,16 @@ public class Main {
         System.out.println();
         System.out.println(wishes);
         System.out.println("***************");
+
+
+        try {
+            ChristmasLetter letter = new ChristmasLetter("Ciro", "Via Napoli", wishes);
+            System.out.println(letter.send());
+        } catch (wishesException e) {
+            e.getMessage();
+        }
     }
+
+
+
 }
